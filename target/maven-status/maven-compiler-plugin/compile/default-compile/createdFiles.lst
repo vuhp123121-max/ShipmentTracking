@@ -1,4 +1,5 @@
 com\example\app\Application.class
+com\example\app\service\ShipmentService.class
 com\example\app\controller\TestControler.class
 com\example\app\model\Shipment$ShipmentStatus.class
 com\example\app\repository\ShipmentRepository.class

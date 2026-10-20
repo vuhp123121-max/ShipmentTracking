@@ -1,12 +1,12 @@
 package com.example.app.repository;
+import org.springframework.stereotype.Repository;
  
 import com.example.app.model.Shipment;
 import com.example.app.model.Shipment.ShipmentStatus;
 
-import java.lang.classfile.ClassFile.Option;
 import java.util.*;
 import java.time.*;
-
+@Repository 
 public class ShipmentRepository {
     ///Thao tác 1
     private final Map<String, Shipment> findShipmentByString = new HashMap<>();
@@ -54,6 +54,11 @@ public class ShipmentRepository {
         return findShipmentByID.values().stream()
                .filter(s -> s.getEstimatedDeliveryDate().equals(estimatedDeliveryDate))
                .toList();
+    }
+    ///Lay toan bo
+    public List<Shipment> findall()
+    {
+        return new ArrayList<>(findShipmentByID.values());
     }
 
 

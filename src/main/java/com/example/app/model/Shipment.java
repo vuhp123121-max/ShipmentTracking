@@ -53,8 +53,12 @@ public class Shipment {
     public String getDestination(){
         return destination;
     }
+    
     public ShipmentStatus getStatus(){
         return status;
+    }
+    public void setStatus(ShipmentStatus status) {
+        this.status = status;
     }
     public LocalDateTime getCreatedAt(){
         return createdAt;
@@ -62,6 +66,7 @@ public class Shipment {
     public LocalDate getEstimatedDeliveryDate(){
         return estimatedDeliveryDate;
     }
+    
     
 @Override 
     public String toString()
