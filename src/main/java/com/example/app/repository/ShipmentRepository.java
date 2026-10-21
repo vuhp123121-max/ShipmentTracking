@@ -18,15 +18,26 @@ public class ShipmentRepository {
         findShipmentByString.put(shipment.getTrackingNumber(), shipment);
         findShipmentByID.put(shipment.getID(), shipment);
     }
-    public boolean deletebyID(Long ID)
-    {
-        Shipment removedShipment = findShipmentByID.remove(ID);
-        return removedShipment != null;
+    //Xóa theo ID
+    //public boolean deletebyID(Long ID)
+    //{
+      //  Shipment removedShipment = findShipmentByID.remove(ID);
+        //return removedShipment != null;
 
-    }
+    //}
+    //Xoá cả theo tracking Number
+    //public boolean deletebyTrackingNumber(String trackingNumber)
+    //{
+      //  Shipment removedShipment = findShipmentByString.remove(trackingNumber);
+        //return removedShipment != null;
+    //}
     ///Thao tác riêng: Kiểm tra theo mã ID đã có tồn tại hay chưa
     public boolean exitsByID(Long ID) {
         return findShipmentByID.containsKey(ID);
+    }
+    //Kiểm tra các Số hiệu có bị trùng không 
+    public boolean exitByTrackingNumber(String trackingNumber) {
+        return findShipmentByString.containsKey(trackingNumber);
     }
     ///Thao tác 2
     public Optional<Shipment> findByID(Long ID) {
