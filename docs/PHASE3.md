@@ -5,3 +5,4 @@ Hoàn thiện ShipmentMenu.java, dùng CommandLineRunner và kết nối menu v�
 - Thêm, xem, tìm kiếm lô hàng.
 - Cập nhật trạng thái, xóa lô hàng.
 - Xử lý dữ liệu nhập sai và lỗi nghiệp vụ.
+  (DONE)

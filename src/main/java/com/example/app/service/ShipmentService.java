@@ -27,9 +27,14 @@ public Shipment addShipment(Shipment shipment) {
     }
     else if (shipmentRepository.exitByTrackingNumber(shipment.getTrackingNumber())) {
         throw new IllegalArgumentException
-        ("Số hiệu bi trùng " + shipment.getTrackingNumber());
+        ("Số hiệu bị trùng " + shipment.getTrackingNumber());
     }
     shipmentRepository.save(shipment);
+
+    // Đồng bộ dữ liệu vào Service map để delete hoạt động được
+    findShipmentByString.put(shipment.getTrackingNumber(), shipment);
+    findShipmentByID.put(shipment.getID(), shipment);
+
     return shipment;
 }
 ///Tìm theo ID và lấy toàn bộ

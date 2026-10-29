@@ -9,6 +9,11 @@ import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/// Về file test model: Sẽ xác nhận đã gán đúng tất cả các thuộc tính chưa
+/// xác nhận các Status thay đổi theo trạng thái
+/// Sẽ có 2 phương thức hàm chính:
+///     constructor_shouldSetAllFields: Kiểm tra hàm khởi tạo đảm bảo các đối tượng thuộc tính đều đã được gán đúng đối tượng
+///     set Status_shouldUpdateStatus(): Kiểm tra phương thức setStatus() cập nhật trạng thái mới
 class ShipmentTest {
 
     @Test

@@ -1,0 +1,148 @@
+Oct 29, 2026 11:46:59 PM org.jline.utils.Log logr
+WARNING: Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+[main] WARNING org.jline - Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+[WARNING] Unable to find the root directory. Create a .mvn directory in the root directory or add the root="true" attribute on the root project's model to identify it.
+[INFO] Processing build on daemon 99ca7ca8
+[INFO] Scanning for projects...
+[INFO] BuildTimeEventSpy is registered.
+[INFO] 
+[INFO] Using the SmartBuilder implementation with a thread count of 11
+[INFO] 
+[INFO] ----------------------------------------------< com.example:demo >----------------------------------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] ----------------------------------------------------[ jar ]-----------------------------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.1.1:run (default-cli) > test-compile @ demo >>>
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ demo ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ demo ---
+[INFO] skip non existing resourceDirectory D:\project\ShipmentTracking\src\test\resources
+[INFO] skip non existing resourceDirectory D:\project\ShipmentTracking\src\test\resources-filtered
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.1.1:run (default-cli) < test-compile @ demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.1.1:run (default-cli) @ demo ---
+[INFO] Attaching agents: []
+[INFO] [stdout] 
+[INFO] [stdout]   .   ____          _            __ _ _
+[INFO] [stdout]  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+[INFO] [stdout] ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+[INFO] [stdout]  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+[INFO] [stdout]   '  |____| .__|_| |_|_| |_\__, | / / / /
+[INFO] [stdout]  =========|_|==============|___/=/_/_/_/
+[INFO] [stdout] 
+[INFO] [stdout]  :: Spring Boot ::                (v4.1.1)
+[INFO] [stdout] 
+[INFO] [stdout] 2026-10-29T23:47:00.705+07:00  INFO 16004 --- [           main] com.example.app.Application              : Starting Application using Java 26.0.2 with PID 16004 (D:\project\ShipmentTracking\target\classes started by Admin in D:\project\ShipmentTracking)
+[INFO] [stdout] 2026-10-29T23:47:00.707+07:00  INFO 16004 --- [           main] com.example.app.Application              : No active profile set, falling back to 1 default profile: "default"
+[INFO] [stdout] 2026-10-29T23:47:01.169+07:00  INFO 16004 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO] [stdout] 2026-10-29T23:47:01.188+07:00  INFO 16004 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+[INFO] [stdout] 2026-10-29T23:47:01.561+07:00  INFO 16004 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+[INFO] [stdout] 2026-10-29T23:47:01.572+07:00  INFO 16004 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+[INFO] [stdout] 2026-10-29T23:47:01.572+07:00  INFO 16004 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+[INFO] [stdout] 2026-10-29T23:47:01.615+07:00  INFO 16004 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 868 ms
+[INFO] [stdout] 2026-10-29T23:47:01.764+07:00  INFO 16004 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+[INFO] [stdout] 2026-10-29T23:47:01.808+07:00  INFO 16004 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+[INFO] [stdout] 2026-10-29T23:47:02.160+07:00  INFO 16004 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO] [stdout] 2026-10-29T23:47:02.195+07:00  INFO 16004 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+[INFO] [stdout] 2026-10-29T23:47:02.356+07:00  INFO 16004 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d235635
+[INFO] [stdout] 2026-10-29T23:47:02.358+07:00  INFO 16004 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+[INFO] [stdout] 2026-10-29T23:47:02.427+07:00  INFO 16004 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+[INFO] [stdout] 	Database JDBC URL [jdbc:mysql://localhost:3307/ShipmentTracking?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Ho_Chi_Minh]
+[INFO] [stdout] 	Database driver: MySQL Connector/J
+[INFO] [stdout] 	Database dialect: MySQLDialect
+[INFO] [stdout] 	Database version: 8.4.11
+[INFO] [stdout] 	Default catalog/schema: ShipmentTracking/undefined
+[INFO] [stdout] 	Autocommit mode: undefined/unknown
+[INFO] [stdout] 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+[INFO] [stdout] 	JDBC fetch size: none
+[INFO] [stdout] 	Pool: DataSourceConnectionProvider
+[INFO] [stdout] 	Minimum pool size: undefined/unknown
+[INFO] [stdout] 	Maximum pool size: undefined/unknown
+[INFO] [stdout] 2026-10-29T23:47:02.721+07:00  INFO 16004 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO] [stdout] 2026-10-29T23:47:02.765+07:00  INFO 16004 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO] [stdout] 2026-10-29T23:47:02.868+07:00  WARN 16004 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO] [stdout] 2026-10-29T23:47:03.120+07:00  INFO 16004 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+[INFO] [stdout] 2026-10-29T23:47:03.124+07:00  INFO 16004 --- [           main] com.example.app.Application              : Started Application in 2.766 seconds (process running for 3.106)
+[INFO] [stdout] 1. Add shipment
+[INFO] [stdout] 
+[INFO] [stdout] 2. Get all shipments
+[INFO] [stdout] 
+[INFO] [stdout] 3. Find By ID
+[INFO] [stdout] 
+[INFO] [stdout] 4. Find By Tracking Number
+[INFO] [stdout] 
+[INFO] [stdout] 5. Find By Status
+[INFO] [stdout] 
+[INFO] [stdout] 6. Update Status
+[INFO] [stdout] 
+[INFO] [stdout] 7. Find By Tracking Number
+[INFO] [stdout] 
+[INFO] [stdout] 8. Find By Estimated Delivery Date
+[INFO] [stdout] 
+[INFO] [stdout] 9. Find By Sender Name
+[INFO] [stdout] 
+[INFO] [stdout] 10. Delete By ID
+[INFO] [stdout] 
+[INFO] [stdout] 0. Exit
+[INFO] [stdout] 
+[INFO] [stdout] Ch?n ch?c n?ng:
+[INFO] [stdout] 
+[INFO] [stdout] 2026-10-29T23:47:03.128+07:00  INFO 16004 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+[INFO] [stdout] 
+[INFO] [stdout] Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[INFO] [stdout] 2026-10-29T23:47:03.139+07:00 ERROR 16004 --- [           main] o.s.boot.SpringApplication               : Application run failed
+[INFO] [stdout] 
+[INFO] [stdout] java.util.NoSuchElementException: No line found
+[INFO] [stdout] 	at java.base/java.util.Scanner.nextLine(Scanner.java:1690) ~[na:na]
+[INFO] [stdout] 	at com.example.app.ShipmentMenu.run(ShipmentMenu.java:29) ~[classes/:na]
+[INFO] [stdout] 	at org.springframework.boot.SpringApplication.lambda$callRunner$1(SpringApplication.java:792) ~[spring-boot-4.1.1.jar:4.1.1]
+[INFO] [stdout] 	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-7.0.9.jar:7.0.9]
+[INFO] [stdout] 	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-7.0.9.jar:7.0.9]
+[INFO] [stdout] 	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-7.0.9.jar:7.0.9]
+[INFO] [stdout] 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800) ~[spring-boot-4.1.1.jar:4.1.1]
+[INFO] [stdout] 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-4.1.1.jar:4.1.1]
+[INFO] [stdout] 	at org.springframework.boot.SpringApplication.lambda$callRunners$0(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+[INFO] [stdout] 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186) ~[na:na]
+[INFO] [stdout] 	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+[INFO] [stdout] 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:571) ~[na:na]
+[INFO] [stdout] 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+[INFO] [stdout] 	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153) ~[na:na]
+[INFO] [stdout] 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176) ~[na:na]
+[INFO] [stdout] 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+[INFO] [stdout] 	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:632) ~[na:na]
+[INFO] [stdout] 	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+[INFO] [stdout] 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:328) ~[spring-boot-4.1.1.jar:4.1.1]
+[INFO] [stdout] 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+[INFO] [stdout] 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+[INFO] [stdout] 	at com.example.app.Application.main(Application.java:9) ~[classes/:na]
+[INFO] [stdout] 
+[INFO] [stdout] 2026-10-29T23:47:03.146+07:00  INFO 16004 --- [           main] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+[INFO] [stdout] 2026-10-29T23:47:03.150+07:00  INFO 16004 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+[INFO] [stdout] 2026-10-29T23:47:03.153+07:00  INFO 16004 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO] [stdout] 2026-10-29T23:47:03.154+07:00  INFO 16004 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+[INFO] [stdout] 2026-10-29T23:47:03.161+07:00  INFO 16004 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] ----------------------------------------------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ----------------------------------------------------------------------------------------------------------------
+[INFO] Total time:  3.764 s (Wall Clock)
+[INFO] Finished at: 2026-10-29T23:47:03+07:00
+[INFO] ----------------------------------------------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.1.1:run (default-cli) on project demo: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the '-e' switch
+[ERROR] Re-run Maven using the '-X' switch to enable verbose output
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

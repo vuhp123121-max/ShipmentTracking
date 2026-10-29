@@ -109,17 +109,18 @@ class ShipmentServiceTest {
 
     @Test
     void deleteShipmentbyID_shouldReturnTrueWhenExists() {
-        when(shipmentRepository.findByID(1L)).thenReturn(Optional.of(shipment));
+        // Thêm shipment vào Service map, rồi mới xóa
+        Shipment saved = shipmentService.addShipment(shipment);
 
         boolean result = shipmentService.deleteShipmentbyID(1L);
 
         assertTrue(result);
+        verify(shipmentRepository, times(1)).save(shipment);
     }
 
     @Test
     void deleteShipmentbyID_shouldReturnFalseWhenNotFound() {
-        when(shipmentRepository.findByID(1L)).thenReturn(Optional.empty());
-
+        // Không có shipment nào trong Service map, xóa luôn trả về false
         boolean result = shipmentService.deleteShipmentbyID(1L);
 
         assertFalse(result);
