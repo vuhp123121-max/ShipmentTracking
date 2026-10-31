@@ -3,16 +3,34 @@ package com.example.app.model;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
+///PHASE5: Chuyển Shipment thành JPA Entity
+/// Các annotation JPA giúp Sping/Hibernate hiểu cách lưu object đó vào MySQL
 
+@Entity 
+@Table(name = "shipments")
 public class Shipment {
+    
+    @Id 
+    @Column (name = "shipment_id", nullable = false, unique = true)
     Long ID;
+    @Column (name = "tracking_number", nullable = false, unique = true)
     String trackingNumber;
     String senderName;
     String receiverName;
     String origin;
     String destination;
+    @Enumerated (EnumType.STRING)
+    @Column (name = "status", nullable = false)
     ShipmentStatus status;
     LocalDateTime createdAt;
     LocalDate estimatedDeliveryDate; 
@@ -22,6 +40,7 @@ public class Shipment {
     PENDING, IN_TRANSIT, DELIVERED
 
 }
+protected Shipment() {}
 
  public Shipment(Long ID, String trackingNumber, String senderName, String receiverName, String origin, String destination, LocalDateTime createdAt, LocalDate estimatedDeliveryDate ) 
     {
