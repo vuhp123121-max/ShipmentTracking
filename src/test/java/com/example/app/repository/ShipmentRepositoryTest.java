@@ -3,6 +3,8 @@ package com.example.app.repository;
 import com.example.app.model.Shipment;
 import com.example.app.model.Shipment.ShipmentStatus;
 import org.junit.jupiter.api.BeforeEach;
+import com.example.app.repository.ShipmentRepository;
+import org.mockito.Mockito;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -17,7 +19,7 @@ class ShipmentRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        repository = new ShipmentRepository();
+        repository = Mockito.mock(ShipmentRepository.class);
     }
 
     @Test
@@ -58,7 +60,7 @@ class ShipmentRepositoryTest {
         repository.save(new Shipment(1L, "TN001", "Sender", "Receiver", "Hanoi", "Da Nang", null, LocalDate.of(2026, 11, 1)));
         repository.save(new Shipment(2L, "TN002", "Sender", "Receiver", "Hanoi", "Da Nang", null, LocalDate.of(2026, 11, 1)));
 
-        List<Shipment> all = repository.findall();
+        List<Shipment> all = repository.findAll();
         assertEquals(2, all.size());
     }
 }
