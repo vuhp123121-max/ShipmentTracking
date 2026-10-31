@@ -33,15 +33,23 @@
 - Xác nhận `docker/Dockerfile` và `.github/workflows/ci.yml` đang rỗng; Docker Compose hiện chỉ khai báo MySQL.
 - Ghi nhận thao tác xóa trong service cần hoàn thiện để cập nhật repository đang được sử dụng.
 
+### 01/11/2026 — PHASE5: Database & Persistence (đang thực hiện)
+
+- Khởi động MySQL bằng Docker Compose và kết nối thành công từ DBeaver.
+- Cập nhật `application.properties` để dùng `localhost:3306`, database `shipment_tracking` và tài khoản theo cấu hình Docker Compose.
+- Ánh xạ `Shipment` thành JPA entity với bảng `shipments`; ID hiện vẫn do người dùng nhập, tracking number được đặt duy nhất và status lưu dạng chuỗi.
+- Bắt đầu chuyển `ShipmentRepository` sang Spring Data JPA. Việc chuyển đổi chưa hoàn tất: tên `JpaRepository` đang bị gõ sai thành `JpaRepostiory`; service và repository tests vẫn còn phụ thuộc API in-memory cũ.
+- Chưa xác nhận luồng lưu shipment từ ứng dụng vào MySQL.
+
 ## Trạng thái hiện tại
 
-Dự án đang ở giai đoạn nền tảng nghiệp vụ và kiểm thử ban đầu. Ứng dụng có model, repository in-memory, service, menu terminal và endpoint kiểm tra `/ping`.
+Dự án đang chuyển từ repository in-memory sang JPA/MySQL. MySQL đã kết nối được từ DBeaver và `Shipment` đã được ánh xạ thành entity; service/repository chưa đồng bộ hoàn toàn với Spring Data JPA.
 
 ## Hướng tiếp theo
 
-1. Hoàn thiện và kiểm thử nghiệp vụ service, đặc biệt là thao tác xóa shipment.
-2. Chạy và hoàn thiện bộ test hiện có.
-3. Tích hợp JPA/MySQL thay cho repository in-memory.
+1. Hoàn tất chuyển `ShipmentRepository` sang `JpaRepository` và đồng bộ `ShipmentService`.
+2. Cập nhật repository tests và xác nhận dữ liệu shipment được lưu bền vững trong MySQL.
+3. Hoàn thiện các phần còn lại của PHASE5.
 4. Xây dựng REST API cho các nghiệp vụ shipment.
 5. Hoàn thiện Dockerfile và Docker Compose cho ứng dụng cùng cơ sở dữ liệu.
 6. Cấu hình GitHub Actions chạy test trước khi build.
@@ -50,7 +58,7 @@ Dự án đang ở giai đoạn nền tảng nghiệp vụ và kiểm thử ban 
 ## Công nghệ
 
 - Java 21, Spring Boot, Maven
-- MySQL 8 (đã có cấu hình, chưa tích hợp vào repository)
+- MySQL 8 (đang tích hợp qua Spring Data JPA)
 - Docker Compose
 - GitHub Actions (workflow đã tạo nhưng chưa cấu hình)
 
